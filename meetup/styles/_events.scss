@@ -1,0 +1,271 @@
+/* ---Events-near----Upcoming online events--------------------------------------------- */
+
+.page__events-block,
+.page__categories-block {
+    display: flex;
+    justify-content: center;
+}
+
+.page__events-block-title,
+.page__onlineEvents-block-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.page__events-title,
+.page__onlineEvents-title {
+    @include page-subtitle;
+}
+
+.page__events-location {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    border-radius: 8px;
+    margin-left: 20px;
+    color: $firm-green;
+    padding: 10px 60px 10px 12px;
+    background: $light-green;
+
+    &:after {
+        content: ' ';
+        width: 16px;
+        height: 16px;
+        background-image: url('../img/pen-icon.svg');
+        background-size: cover;
+        position: absolute;
+        transform: translate(160%, 25%);
+        z-index: 1;
+    }
+
+    &:hover {
+        background-color: darken($light-green, 20%);
+        text-decoration: underline;
+    }
+}
+
+.page__events-all,
+.page__onlineEvents-all {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: $firm-green;
+    margin-left: auto;
+
+    &:hover {
+        color: lighten($firm-green, 5%);
+        text-decoration: underline;
+    }
+}
+
+.event-block__all-cards,
+.onlineEvent-block__all-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 36px;
+    margin-bottom: 40px;
+}
+
+.event-block__card,
+.onlineEvent-block__card {
+    border-radius: 4px;
+    width: 100%;
+    height: 399px;
+    position: relative;
+    // background-color: #eee;
+
+    .onlineEvent-label {
+        @include onlineEvent-label();
+        position: absolute;
+        top: 2px;
+        left: 2px;
+    }
+
+    .event-block__card-info,
+    .onlineEvent-block__card-info {
+        position: relative;
+    }
+
+    &:hover {
+
+        .event-block__card-title,
+        .onlineEvent-block__card-title {
+            text-decoration: underline;
+        }
+
+        .event-block__card-image,
+        .onlineEvent-block__card-image {
+            opacity: .7;
+        }
+    }
+
+    .event-block__card-image,
+    .onlineEvent-block__card-image {
+        width: 100%;
+        height: 153px;
+        border-radius: 4px;
+        background-size: cover;
+        background-position: center;
+        opacity: 1;
+        flex-shrink: 0;
+
+    }
+
+    .event-block__card-title,
+    .onlineEvent-block__card-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        margin: 14px 0 18px 0;
+    }
+
+    .event-block__card-location,
+    .onlineEvent-block__card-location {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        color: $text-gray;
+    }
+
+    .event-block__card-date,
+    .onlineEvent-block__card-date {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        margin: 16px 0 11px 0;
+        margin-left: 25px;
+    }
+
+    .online-block__date-img,
+    .onlineEvent-block__date-img {
+        width: 20px;
+        height: 20px;
+        transform: translate(0%, 175%);
+    }
+
+    .event-block__card-attendees,
+    .onlineEvent-block__card-attendees {
+        display: flex;
+    }
+
+    .event-block__card-going,
+    .onlineEvent-block__card-going {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .event-block__card-going,
+    .onlineEvent-block__card-going {
+        margin-left: 25px;
+    }
+
+    .event-block__card-free,
+    .onlineEvent-block__card-free {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .event-block__card-free,
+    .onlineEvent-block__card-free {
+        margin-left: 45px;
+    }
+
+    .event-block__card-going::before {
+        content: ' ';
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/check.svg');
+        background-size: cover;
+        position: absolute;
+        transform: translate(-125%, 10%);
+        z-index: 1;
+    }
+
+    .onlineEvent-block__card-going::before {
+        content: ' ';
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/check.svg');
+        background-size: cover;
+        position: absolute;
+        transform: translate(-125%, 10%);
+        z-index: 1;
+    }
+
+    .event-block__card-free::before {
+        content: ' ';
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/ticket.svg');
+        background-size: cover;
+        position: absolute;
+        transform: translate(-125%, 10%);
+        z-index: 1;
+    }
+
+    .onlineEvent-block__card-free::before {
+        content: ' ';
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/ticket.svg');
+        background-size: cover;
+        position: absolute;
+        transform: translate(-125%, 10%);
+        z-index: 1;
+    }
+}
+
+.event-block__card-image.event-1 {
+    background-image: url('../img/event-1.png');
+
+}
+
+.event-block__card-image.event-2 {
+    background-image: url('../img/event-2.png');
+}
+
+.event-block__card-image.event-3 {
+    background-image: url('../img/event-3.png');
+}
+
+.event-block__card-image.event-4 {
+    background-image: url('../img/event-4.png');
+}
+
+.event-block__card-image.event-5 {
+    background-image: url('../img/event-5.png');
+}
+
+.event-block__card-image.event-6 {
+    background-image: url('../img/event-6.png');
+}
+
+.event-block__card-image.event-7 {
+    background-image: url('../img/event-7.png');
+}
+
+.event-block__card-image.event-8 {
+    background-image: url('../img/event-8.png');
+}
+
+.onlineEvent-block__card-image.onlineEvent-1 {
+    background-image: url('../img/onlineEvent-1.png');
+}
+
+.onlineEvent-block__card-image.onlineEvent-2 {
+    background-image: url('../img/onlineEvent-2.png');
+}
+
+.onlineEvent-block__card-image.onlineEvent-3 {
+    background-image: url('../img/onlineEvent-3.png');
+}
+
+.onlineEvent-block__card-image.onlineEvent-4 {
+    background-image: url('../img/onlineEvent-4.png');
+}

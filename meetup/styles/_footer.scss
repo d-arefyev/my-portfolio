@@ -1,0 +1,142 @@
+.footer {
+    background-color: $text-black;
+    color: $white;
+}
+
+footer li a {
+    color: $footer-white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+
+    .footer-container {
+        width: calc(1140px - 74px);
+        padding-bottom: 40px;
+    }
+}
+
+
+.footer__create-group {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $text-gray;
+    height: 95px;
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        color: $white;
+    }
+
+    .footer-button__get-started {
+        color: $white;
+        border: 2px solid $white;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 8px 18px;
+        border-radius: 6px;
+        white-space: nowrap;
+        margin-left: 38px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $white;
+            color: $text-black;
+        }
+    }
+}
+
+.footer__columns {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    margin: 24px 0 30px 0;
+
+    .footer__column {
+
+        .footer__column-title {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-bottom: 10px;
+        }
+
+        .footer__column-links {
+
+            li {
+                margin-bottom: 14px;
+            }
+
+            a:hover {
+                color: $white;
+            }
+        }
+    }
+}
+
+.footer__social-block {
+
+    .footer__column-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+
+    .footer__socialBlock-items {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        .footer__social-icons {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+
+            a:hover svg path {
+                fill: $white;
+            }
+        }
+
+        .footer__stores-icons a img {
+            display: inline-block;
+            border: 1px solid $footer-white;
+            border-radius: 6px;
+            height: 40px;
+
+            &:hover {
+                border: 1px solid $white;
+            }
+        }
+
+        .footer__stores-icons a:last-child {
+            margin-left: 20px;
+        }
+
+    }
+
+}
+
+.footer__legal {
+    display: flex;
+    justify-content: start;
+
+    .footer__legal-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-left: 30px;
+        }
+
+        a:hover {
+            color: $white;
+        }
+    }
+}

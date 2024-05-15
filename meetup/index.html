@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="shortcut icon" href="./img/meetup-icon.svg" />
+    <title>Meetup</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header__container">
+                <a href="./index.html" class="header__logo">
+                    <img src="./img/meetup-logo.svg" alt="Meetup">
+                </a>
+                <div class="header__search-block">
+                    <div class="header__search-events">
+                        <input type="text" placeholder="Search events">
+                    </div>
+                    <div class="header__search-location">
+                        <input type="text" placeholder="Mountain View, CA">
+                    </div>
+                    <button class="header__search-button"></button>
+                </div>
+                <div class="header__client-block">
+                    <img class="header__lang-img" src="./img/lang.svg" alt="Lamguage">
+                    <a class="header__client-lang" href="#">English</a>
+                    <a class="header__client-login" href="#" type="submit">Log in</a>
+                    <button class="header__client-button button">Sign up</button>
+                </div>
+            </div>
+        </div>
+        <div class="header__search-block hidden">
+            <div class="header__search-location">
+                <input type="text" placeholder="Search events">
+            </div>
+            <button class="header__search-button"></button>
+        </div>
+
+        <main class="page">
+            <div class="page__main-block">
+                <div class="main-block__container container">
+                    <div class="main-block__body">
+                        <h1 class="main-block__title">The people platform—Where
+                            interests become friendships</h1>
+                        <div class="main-block__text">
+                            Whatever your interest, from hiking and reading to networking and skill sharing,
+                            there are thousands of people who share it on Meetup. Events are happening
+                            every day—sign up to join the fun.
+                        </div>
+                        <a href="/events.html" class="main-block__button">Join Meetup</a>
+                    </div>
+                    <img class="main-img" src="./img/main-img.svg" alt="Main image">
+                </div>
+            </div>
+
+            <div class="page__events-block">
+                <div class="events-block__container container">
+
+                    <div class="page__events-block-title">
+                        <h3 class="page__events-title">Events near</h3>
+                        <a href="#" class="page__events-location">Mountain View, CA</a>
+                        <a href="#" class="page__events-all">See all events</a>
+                    </div>
+
+                    <div class="event-block__all-cards">
+                        <a class="event-block__card" id="eventCard-1" href="#">
+                            <div class="event-block__card-image event-1"></div>
+                            <div class="event-block__card-info">
+                                <p class="event-block__card-title">Day Trading Idea and Strategy</p>
+                                <p class="event-block__card-location">Business (5 km)</p>
+                                <img class="online-block__date-img" src="./img/calend.svg" alt="">
+                                <p class="event-block__card-date">Mon, Mar 18 · 7:00 PM PDT</p>
+                                <div class="event-block__card-attendees">
+                                    <p class="event-block__card-going">1 going</p>
+                                    <p class="event-block__card-free">Free</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="event-block__card" id="eventCard-2" href="#">
+                            <div class="event-block__card-image event-2"></div>
+                            <div class="event-block__card-info">
+                                <p class="event-block__card-title">Let's Talk Networking: JPMorgan Chase in Palo
+                                    Alto</p>
+                                <p class="event-block__card-location">Business (25 km)</p>
+                                <img class="online-block__date-img" src="./img/calend.svg" alt="">
+                                <p class="event-block__card-date">Tue, Mar 19 · 5:00 PM PDT</p>
+                                <div class="event-block__card-attendees">
+                                    <p class="event-block__card-going">41 going</p>
+                                    <p class="event-block__card-free">Free</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="event-block__card" id="eventCard-3" href="#">
+                            <div class="onlineEvent-label">Online Event</div>
+                            <div class="event-block__card-image event-3"></div>
+                            <div class="event-block__card-info">
+                                <p class="event-block__card-title">Tech Talks & Quiz: Next-Gen Database Solutions for Emerging Use Cases</p>
+                                <p class="event-block__card-location">Technology</p>
+                                <img class="online-block__date-img" src="./img/calend.svg" alt="">
+                                <p class="event-block__card-date">Wed, Mar 13 · 6:00 PM PDT</p>
+                                <div class="event-block__card-attendees">
+                                    <p class="event-block__card-going">40 going</p>
+                                    <p class="event-block__card-free">Free</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="event-block__card" id="eventCard-4" href="#">
+                            <div class="event-block__card-image event-4"></div>
+                            <div class="event-block__card-info">
+                                <p class="event-block__card-title">INFORMS San Francisco Chapter In-Person Event</p>
+                                <p class="event-block__card-location">Health and Wellbeing (50 km)</p>
+                                <img class="online-block__date-img" src="./img/calend.svg" alt="">
+                                <p class="event-block__card-date">Thu, Mar 28 · 5:00 PM PDT</p>
+                                <div class="event-block__card-attendees">
+                                    <p class="event-block__card-going">41 going</p>
+                                    <p class="event-block__card-free">Free</p>
+                                </div>
+                            </div>
+                        </a>                        
+
+                        <a class="event-block__card" id="eventCard-5" href="#">
+                            <div class="event-block__card-image event-5"></div>
+                            <div class="event-block__card-info">
+                                <p class="event-block__card-title">AI Wednesdays - Meet and Greet!</p>
+                                <p class="event-block__card-location">Technology (5 km)</p>
+                                <img class="online-block__date-img" src="./img/calend.svg" alt="">
+                                <p class="event-block__card-date">Wed, Mar 13 · 6:30 PM PDT</p>
+                                <div class="event-block__card-attendees">
+                                    <p class="event-block__card-going">29 going</p>
+                                    <p class="event-block__card-free">Free</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a class="event-block__card" id="eventCard-6" href="#">
+                            <div class="event-block__card-image event-6"></div>
+                            <div class="event-block__card-info">
+                                <p class="event-block__card-title">ROS By-The-Bay March 2024</p>
+                                <p class="event-block__card-location">Social Activities</p>
+                                <img class="online-block__date-img" src="./img/calend.svg" alt="">
+                                <p class="event-block__card-date">Thu, Mar 21 · 6:00 PM PDT</p>
+                                <div class="event-block__card-attendees">
+                                    <p class="event-block__card-going">51 going</p>
+                                    <p class="event-block__card-free">Free</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a class="event-block__card" id="eventCard-7" href="#">
+                            <div class="event-block__card-image event-7"></div>
+                            <div class="event-block__card-info">
+                                <p class="event-block__card-title">Free Christian Singles' Dinner</p>
+                                <p class="event-block__card-location">Hobbies and Passions (10 km)</p>
+                                <img class="online-block__date-img" src="./img/calend.svg" alt="">
+                                <p class="event-block__card-date">Fri, Mar 29 · 6:00 PM PDT</p>
+                                <div class="event-block__card-attendees">
+                                    <p class="event-block__card-going">11 going</p>
+                                    <p class="event-block__card-free">Free</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a class="event-block__card" id="eventCard-8" href="#">
+                            <div class="event-block__card-image event-8"></div>
+                            <div class="event-block__card-info">
+                                <p class="event-block__card-title">In-person: Deep Dive into RAG Architectures (Food served)</p>
+                                <p class="event-block__card-location">Hobbies and Passions (50 km)</p>
+                                <img class="online-block__date-img" src="./img/calend.svg" alt="">
+                                <p class="event-block__card-date">Thu, Mar 14 · 5:00 PM PDT</p>
+                                <div class="event-block__card-attendees">
+                                    <p class="event-block__card-going">16 going</p>
+                                    <p class="event-block__card-free">Free</p>
+                                </div>
+                            </div>
+                        </a>                        
+                    </div>
+
+                    <div class="page__onlineEvents-block-title">
+                        <h3 class="page__onlineEvents-title">Upcoming online events</h3>
+                        <a href="#" class="page__onlineEvents-all">See all events</a>
+                    </div>
+
+                    <div class="onlineEvent-block__all-cards">
+                        <a class="onlineEvent-block__card" id="onlineEventCard-1" href="#">
+                            <div class="onlineEvent-label">Online Event</div>
+                            <div class="onlineEvent-block__card-image onlineEvent-1"></div>
+                            <div class="onlineEvent-block__card-info">
+                                <p class="onlineEvent-block__card-title">Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers</p>
+                                <p class="onlineEvent-block__card-location">Business (25 km)</p>
+                                <img class="onlineEvent-block__date-img" src="./img/calend.svg" alt="">
+                                <p class="onlineEvent-block__card-date">Thu, Mar 14 · 6:00 PM PDT</p>
+                                <div class="onlineEvent-block__card-attendees">
+                                    <p class="onlineEvent-block__card-going">3 going</p>
+                                    <p class="onlineEvent-block__card-free">Free</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a class="onlineEvent-block__card" id="onlineEventCard-2" href="#">
+                            <div class="onlineEvent-label">Online Event</div>
+                            <div class="onlineEvent-block__card-image onlineEvent-2"></div>
+                            <div class="onlineEvent-block__card-info">
+                                <p class="onlineEvent-block__card-title">Vision Pro Developers Online Meetup</p>
+                                <p class="onlineEvent-block__card-location">Technology</p>
+                                <img class="onlineEvent-block__date-img" src="./img/calend.svg" alt="">
+                                <p class="onlineEvent-block__card-date">Wed, Mar 13 · 7:00 PM PDT</p>
+                                <div class="onlineEvent-block__card-attendees">
+                                    <p class="onlineEvent-block__card-going">51 going</p>
+                                    <p class="onlineEvent-block__card-free">Free</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a class="onlineEvent-block__card" id="onlineEventCard-3" href="#">
+                            <div class="onlineEvent-label">Online Event</div>
+                            <div class="onlineEvent-block__card-image onlineEvent-3"></div>
+                            <div class="onlineEvent-block__card-info">
+                                <p class="onlineEvent-block__card-title">Significant Musical Moments</p>
+                                <p class="onlineEvent-block__card-location">Hobbies and Passions (10 km)</p>
+                                <img class="onlineEvent-block__date-img" src="./img/calend.svg" alt="">
+                                <p class="onlineEvent-block__card-date">Wed, Mar 13 · 6:00 PM PDT</p>
+                                <div class="onlineEvent-block__card-attendees">
+                                    <p class="onlineEvent-block__card-going">16 going</p>
+                                    <p class="onlineEvent-block__card-free">Free</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a class="onlineEvent-block__card" id="onlineEventCard-4" href="#">
+                            <div class="onlineEvent-label">Online Event</div>
+                            <div class="onlineEvent-block__card-image onlineEvent-4"></div>
+                            <div class="onlineEvent-block__card-info">
+                                <p class="onlineEvent-block__card-title">FREE Webinar: Introduction to Power BI</p>
+                                <p class="onlineEvent-block__card-location">Technology</p>
+                                <img class="onlineEvent-block__date-img" src="./img/calend.svg" alt="">
+                                <p class="onlineEvent-block__card-date">Thu, Mar 14 · 5:30 PM PDT</p>
+                                <div class="onlineEvent-block__card-attendees">
+                                    <p class="onlineEvent-block__card-going">33 going</p>
+                                    <p class="onlineEvent-block__card-free">Free</p>
+                                </div>
+                            </div>
+                        </a>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="page__joinMeetup-block">
+                <div class="join-meetup__container container">
+                    <div class="join-meetup__body">
+                        <div class="join-meetup__body-content">
+                            <h3 class="join-meetup__body-title">Join Meetup</h3>
+                            <div class="join-meetup__body-text">
+                                People use Meetup to meet new people, learn new things, find support, get out of their
+                                comfort zones, and pursue their passions, together. Membership is free.
+                            </div>
+                            <a href="/events.html" class="join-meetup__button">Sign up</a>
+                        </div>
+                        <img class="join-meetup__body-img" src="./img/joinMeetup-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="page__categories-block">
+                <div class="categories-block__container container">
+                    <div class="categories-block_title">Explore top categories</div>
+                    <div class="categories-block__all-items">
+                        <a href="#" class="categories-block__item item-1">
+                            <p>Travel and Outdoor</p>
+                        </a>
+                        <a href="#" class="categories-block__item item-2">
+                            <p>Social Activities</p>
+                        </a>
+                        <a href="#" class="categories-block__item item-3">
+                            <p>Hobbies and Passions</p>
+                        </a>
+                        <a href="#" class="categories-block__item item-4">
+                            <p>Sports and Fitnessr</p>
+                        </a>
+                        <a href="#" class="categories-block__item item-5">
+                            <p>Health and Wellbeing</p>
+                        </a>
+                        <a href="#" class="categories-block__item item-6">
+                            <p>Technology</p>
+                        </a>
+                        <a href="#" class="categories-block__item item-7">
+                            <p>Art and Culture</p>
+                        </a>
+                        <a href="#" class="categories-block__item item-8">
+                            <p>Games</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page__cities-block">
+                <div class="cities-block__container container">
+                    <div class="cities-block_title">Popular cities on Meetup</div>
+                    <p class="cities-block_text">Looking for fun things to do near you? See what Meetup organizers are
+                        planning in cities around the country.</p>
+
+                    <div class="cities-block__all-cities">
+                        <div class="cities-block__city">
+                            <a href="#">
+                                <div class="cities-block__city-image city-1"></div>
+                                <p class="cities-block__city-title">New York</p>
+                            </a>
+                        </div>
+                        <div class="cities-block__city">
+                            <a href="#">
+                                <div class="cities-block__city-image city-2"></div>
+                                <p class="cities-block__city-title">San Francisco</p>
+                            </a>
+                        </div>
+                        <div class="cities-block__city">
+                            <a href="#">
+                                <div class="cities-block__city-image city-3"></div>
+                                <p class="cities-block__city-title">Chicago</p>
+                            </a>
+                        </div>
+                        <div class="cities-block__city">
+                            <a href="#">
+                                <div class="cities-block__city-image city-4"></div>
+                                <p class="cities-block__city-title">Nashville</p>
+                            </a>
+                        </div>
+                        <div class="cities-block__city">
+                            <a href="#">
+                                <div class="cities-block__city-image city-5"></div>
+                                <p class="cities-block__city-title">Miami</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page__howWorks-block">
+                <div class="howWorks-block__container container">
+                    <div class="howWorks-block_title">How Meetup works</div>
+                    <div class="howWorks-block__all-howWorks">
+
+                        <a href="#" class="howWorks-block howWorks-1">
+                            <h3 class="howWorks-title">Discover events and groups</h3>
+                            <p class="howWorks-text">See who's hosting local events for all the things you love</p>
+                            <span>Search events and groups</span>
+                        </a>
+                        <a href="#" class="howWorks-block howWorks-2">
+                            <h3 class="howWorks-title">Start a group to host events</h3>
+                            <p class="howWorks-text">Create your own Meetup group, and draw from a community of millions
+                            </p>
+                            <span>Start a group</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page__friendships-block">
+                <div class="friendships-block__container container">
+                    <div class="friendships-block__friendships-block-title">Friendships are made on Meetup</div>
+                    <p class="friendships-block__friendships-text">Since 2002, members have used Meetup to make new
+                        friends, meet like-minded people, spend time on hobbies, and connect with locals over shared
+                        interests. Learn how.</p>
+
+                    <div class="friendships-block__all-friendships">
+                        <a href="#" class="friendships-block friendship-1">
+                            <div class="friendships-block__image friendship-1"></div>
+                            <h3 class="friendship-title">I Used Meetup to Make Friends at Brunch</h3>
+                            <p class="friendship-text">New Jersey-based writer and college student Brianna Stryker
+                                wanted to meet friends in her hometown. Learn how she used Meetup to make connections by
+                                joining a Girls Night Out Meetup group.</p>
+                            <span>Read more</span>
+                        </a>
+
+                        <a href="#" class="friendships-block friendship-2">
+                            <div class="friendships-block__image friendship-2"></div>
+                            <h3 class="friendship-title">How to Turn Casual Connections into Close Friendships</h3>
+                            <p class="friendship-text">It's proven that close friendships are harder to make as an
+                                adult. But don't sweat it: here's what you can do to simplify the process.</p>
+                            <span>Read more</span>
+                        </a>
+
+                        <a href="#" class="friendships-block friendship-3">
+                            <div class="friendships-block__image friendship-3"></div>
+                            <h3 class="friendship-title">Do You Have the “Right” Number of Friends?</h3>
+                            <p class="friendship-text">Studies from around the world have tried to help people answer
+                                this question. Learn about the three tiers of friendship and how to fulfill them.</p>
+                            <span>Read more</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer__create-group">
+                <p>Create your own Meetup group.</p>
+                <a class="footer-button__get-started">Get Started</a>
+            </div>
+            <div class="footer__columns">
+                <div class="footer__column">
+                    <p class="footer__column-title">Your Account</p>
+                    <ul class="footer__column-links">
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="#">Log in</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Become an Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <p class="footer__column-title">Discover</p>
+                    <ul class="footer__column-links">
+                        <li><a href="#">Groups</a></li>
+                        <li><a href="#">Calendar</a></li>
+                        <li><a href="#">Topics</a></li>
+                        <li><a href="#">Cities</a></li>
+                        <li><a href="#">Online Events</a></li>
+                        <li><a href="#">Local Guides</a></li>
+                        <li><a href="#">Make Friends</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <p class="footer__column-title">Meetup</p>
+                    <ul class="footer__column-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Meetup Pro</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Apps</a></li>
+                        <li><a href="#">Podcast</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__social-block">
+                <p class="footer__column-title">Follow us</p>
+                <div class="footer__socialBlock-items">
+                    <div class="footer__social-icons">
+                        <a href="https://www.facebook.com" class="fb">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M25.5 13.076C25.5 6.13101 19.903 0.5 13 0.5C6.09698 0.5 0.5 6.13101 0.5 13.076C0.5 19.3525 5.07043 24.5555 11.0471 25.5V16.7121H7.87238V13.076H11.0471V10.3047C11.0471 7.15315 12.9139 5.41115 15.7686 5.41115C17.1361 5.41115 18.5671 5.65697 18.5671 5.65697V8.75194H16.9902C15.4381 8.75194 14.9529 9.7211 14.9529 10.7168V13.0759H18.4194L17.8656 16.712H14.9529V25.4999C20.9295 24.5571 25.5 19.3542 25.5 13.076Z"
+                                    fill="#D9D9D9" />
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com" class="x">
+                            <svg width="26" height="21" viewBox="0 0 26 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M25.5 2.40507C24.5801 2.81301 23.5916 3.08872 22.5541 3.21271C23.6131 2.57791 24.4264 1.57275 24.8094 0.3751C23.8184 0.962825 22.7206 1.38969 21.5524 1.61975C20.6166 0.622925 19.2838 0 17.8085 0C14.9759 0 12.6792 2.29645 12.6792 5.12894C12.6792 5.53093 12.7247 5.9224 12.8121 6.29778C8.5494 6.08389 4.77009 4.04194 2.24037 0.938863C1.79887 1.69639 1.54594 2.57745 1.54594 3.51741C1.54594 5.29682 2.45151 6.86675 3.82775 7.7865C2.98692 7.75988 2.19611 7.52913 1.50451 7.14501C1.50415 7.16641 1.50415 7.1879 1.50415 7.20949C1.50415 9.69462 3.27214 11.7676 5.61851 12.2388C5.18809 12.356 4.73497 12.4186 4.26715 12.4186C3.93666 12.4186 3.61532 12.3865 3.30222 12.3266C3.95486 14.3644 5.84904 15.8472 8.09345 15.8886C6.33809 17.2642 4.1265 18.0842 1.72353 18.0842C1.30956 18.0842 0.901262 18.06 0.5 18.0126C2.76984 19.4679 5.46589 20.317 8.3624 20.317C17.7965 20.317 22.9555 12.5015 22.9555 5.72369C22.9555 5.5013 22.9505 5.2801 22.9406 5.06017C23.9427 4.33702 24.8124 3.43365 25.5 2.40507Z"
+                                    fill="#D9D9D9" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com" class="youtube">
+                            <svg width="26" height="20" viewBox="0 0 26 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13 0C0.715 0 0.5 1.0925 0.5 9.625C0.5 18.1575 0.715 19.25 13 19.25C25.285 19.25 25.5 18.1575 25.5 9.625C25.5 1.0925 25.285 0 13 0ZM17.0063 10.0425L11.3938 12.6625C10.9025 12.89 10.5 12.635 10.5 12.0925V7.1575C10.5 6.61625 10.9025 6.36 11.3938 6.5875L17.0063 9.2075C17.4975 9.4375 17.4975 9.8125 17.0063 10.0425Z"
+                                    fill="#D9D9D9" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com" class="instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M21.1561 16.5454C21.1061 17.6424 20.9226 18.2384 20.7704 18.6343C20.5658 19.1591 20.3216 19.5344 19.9257 19.928C19.5344 20.3216 19.1591 20.5651 18.6343 20.7675C18.2384 20.9221 17.6401 21.1061 16.5432 21.1584C15.3572 21.2106 15.0059 21.2217 11.9986 21.2217C8.9941 21.2217 8.63991 21.2106 7.454 21.1584C6.35708 21.1061 5.76163 20.9221 5.36574 20.7675C4.83813 20.5651 4.46564 20.3216 4.072 19.928C3.67557 19.5344 3.43151 19.1591 3.22969 18.6343C3.07732 18.2384 2.8911 17.6424 2.84381 16.5454C2.78601 15.3595 2.77542 15.0026 2.77542 12.0014C2.77542 8.9941 2.78601 8.63991 2.84381 7.454C2.8911 6.35708 3.07732 5.76162 3.22969 5.3624C3.43151 4.83812 3.67557 4.46505 4.072 4.07141C4.46564 3.67836 4.83813 3.43426 5.36574 3.22969C5.76163 3.07457 6.35708 2.89331 7.454 2.84106C8.63991 2.78878 8.9941 2.77542 11.9986 2.77542C15.0059 2.77542 15.3572 2.78878 16.5432 2.84106C17.6401 2.89331 18.2384 3.07457 18.6343 3.22969C19.1591 3.43426 19.5344 3.67836 19.9257 4.07141C20.3216 4.46505 20.5658 4.83812 20.7704 5.3624C20.9226 5.76162 21.1061 6.35708 21.1561 7.454C21.2113 8.63991 21.2245 8.9941 21.2245 12.0014C21.2245 15.0026 21.2113 15.3595 21.1561 16.5454ZM23.1816 7.36172C23.1266 6.16301 22.9375 5.34406 22.6567 4.63076C22.371 3.89074 21.9879 3.26359 21.3608 2.63645C20.7364 2.01209 20.1092 1.62901 19.3692 1.33991C18.6531 1.06191 17.837 0.870637 16.6378 0.818387C15.4385 0.76055 15.0554 0.75 11.9986 0.75C8.9446 0.75 8.55876 0.76055 7.35951 0.818387C6.16301 0.870637 5.34739 1.06191 4.62796 1.33991C3.89074 1.62901 3.26359 2.01209 2.63924 2.63645C2.01209 3.26359 1.629 3.89074 1.34045 4.63076C1.06245 5.34406 0.873425 6.16301 0.815587 7.36172C0.763337 8.56098 0.75 8.9446 0.75 12.0014C0.75 15.0554 0.763337 15.4385 0.815587 16.6378C0.873425 17.8342 1.06245 18.6526 1.34045 19.3692C1.629 20.1065 2.01209 20.7364 2.63924 21.3608C3.26359 21.9851 3.89074 22.371 4.62796 22.6595C5.34739 22.9375 6.16301 23.1266 7.35951 23.1816C8.55876 23.2366 8.9446 23.25 11.9986 23.25C15.0554 23.25 15.4385 23.2366 16.6378 23.1816C17.837 23.1266 18.6531 22.9375 19.3692 22.6595C20.1092 22.371 20.7364 21.9851 21.3608 21.3608C21.9879 20.7364 22.371 20.1065 22.6567 19.3692C22.9375 18.6526 23.1266 17.8342 23.1816 16.6378C23.2366 15.4385 23.25 15.0554 23.25 12.0014C23.25 8.9446 23.2366 8.56098 23.1816 7.36172ZM19.3559 5.99508C19.3559 5.2473 18.7499 4.6435 18.0049 4.6435C17.2599 4.6435 16.6532 5.2473 16.6532 5.99508C16.6532 6.7401 17.2599 7.3439 18.0049 7.3439C18.7499 7.3439 19.3559 6.7401 19.3559 5.99508ZM8.24907 12.0014C8.24907 14.0712 9.92863 15.7481 11.9986 15.7481C14.0691 15.7481 15.7509 14.0712 15.7509 12.0014C15.7509 9.92812 14.0691 8.2491 11.9986 8.2491C9.92863 8.2491 8.24907 9.92812 8.24907 12.0014ZM6.22365 12.0014C6.22365 8.81061 8.80783 6.22089 11.9986 6.22089C15.1894 6.22089 17.7764 8.81061 17.7764 12.0014C17.7764 15.1894 15.1894 17.7764 11.9986 17.7764C8.80783 17.7764 6.22365 15.1894 6.22365 12.0014Z"
+                                    fill="#D9D9D9" />
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/" class="tictok">
+                            <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.9693 4.13369C12.0929 3.56389 11.4634 2.6495 11.2653 1.58589C11.2219 1.35254 11.1974 1.11649 11.1974 0.875H8.40281L8.39731 12.0729C8.35119 13.3264 7.31744 14.333 6.05306 14.333C5.65969 14.333 5.29063 14.2354 4.96503 14.0644C4.21616 13.671 3.70605 12.8869 3.70605 11.986C3.70605 10.6917 4.75881 9.63625 6.05581 9.63625C6.29731 9.63625 6.53056 9.677 6.74769 9.74475V7.55513V6.89312C6.51981 6.86325 6.28906 6.84163 6.05581 6.84163C3.22038 6.84163 0.914062 9.14787 0.914062 11.9832C0.914062 13.7225 1.78233 15.2636 3.10913 16.1944C3.94483 16.7804 4.9596 17.125 6.05581 17.125C8.89119 17.125 11.1974 14.8187 11.1974 11.9832V6.30433C12.2937 7.09113 13.6368 7.55513 15.0857 7.55513V5.38451V4.76318C14.3042 4.76046 13.5771 4.52982 12.9693 4.13369Z"
+                                    fill="#D9D9D9" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__stores-icons">
+                        <a href="https://play.google.com/">
+                            <img src="./img/google-play.svg" alt="Google Play">
+                        </a>
+                        <a href="https://www.apple.com/app-store/">
+                            <img src="./img/appstore.svg" alt="App Store">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer__legal">
+                <p>© 2024 Meetup</p>
+                <ul class="footer__legal-links">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Do Not Sell or Share My Personal Data</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+    </footer>
+
+
+
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

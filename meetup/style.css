@@ -1,0 +1,1767 @@
+@charset "UTF-8";
+/* Обнуление */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #212121;
+  box-sizing: border-box;
+}
+a:focus {
+  box-shadow: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: roboto;
+  color: #212121;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.header__logo {
+  margin: 0 40px 0 24px;
+}
+
+.header__search-block {
+  display: flex;
+  justify-content: space-between;
+  height: 42px;
+}
+
+.header__search-events,
+.header__search-location,
+.header__search-button,
+input {
+  height: 100%;
+  font-size: 16px;
+}
+
+.header__search-events input {
+  width: 300px;
+  padding: 0 0 0 37px;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #d9d9d9;
+  border-right: none;
+  position: relative;
+}
+
+.header__search-location input {
+  width: 250px;
+  padding: 0 0 0 17px;
+  border: 1px solid #d9d9d9;
+  border-right: none;
+}
+
+input:focus {
+  outline: 1px solid #00798a;
+  outline-offset: -1px;
+}
+
+.header__search-events::before {
+  content: " ";
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/search.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(80%, 75%);
+  z-index: 1;
+}
+
+.header__search-button {
+  width: 42px;
+  border-radius: 0 8px 8px 0;
+  background-color: #F65858;
+  cursor: pointer;
+  position: relative;
+}
+.header__search-button:before {
+  content: " ";
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/search-w.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.header__search-button:hover {
+  background-color: #f77070;
+}
+
+.header__search-block.hidden {
+  display: none;
+  width: 100%;
+  margin: 0 24px;
+}
+.header__search-block.hidden .header__search-location {
+  display: inline-block;
+  width: calc(100% - 88px);
+  margin-right: -4px;
+}
+.header__search-block.hidden input {
+  border-radius: 8px 0px 0px 8px;
+  padding: 0 0 0 40px;
+}
+.header__search-block.hidden .header__search-button {
+  border-radius: 0px 8px 8px 0px;
+  transform: translateY(-5.5px);
+  width: 40px;
+}
+.header__search-block.hidden .header__search-location::before {
+  content: " ";
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/search.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(80%, 75%);
+  z-index: 1;
+}
+
+.header__search-block.hidden * {
+  width: 100%;
+}
+
+.header__client-block {
+  margin-left: auto;
+}
+
+.header__client-button {
+  background-color: #00798a;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 18px;
+  margin: 0 24px 0 21px;
+}
+.header__client-button:hover {
+  background-color: #008fa4;
+}
+
+.header__client,
+.header__client-lang,
+.header__client-login {
+  color: inherit;
+  font-weight: 500;
+}
+.header__client:hover,
+.header__client-lang:hover,
+.header__client-login:hover {
+  color: #00798a;
+}
+
+.header__lang-img {
+  transform: translate(-20%, 47%);
+}
+
+.header__client-lang {
+  margin-right: 21px;
+}
+
+/* ---MAIN-BLOCK---------------------------------------------------------------------- */
+.page {
+  flex: 1;
+}
+
+.page__main-block {
+  display: flex;
+  margin-bottom: 130px;
+}
+
+.main-block__container {
+  display: flex;
+  align-items: end;
+}
+
+.main-block__body {
+  margin-top: 71px;
+  margin-right: 96px;
+}
+
+.main-block__title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 124%;
+}
+
+.main-block__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 24px 0;
+  margin-bottom: 33px;
+}
+
+a.main-block__button {
+  background-color: #00798a;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 10px 19px;
+}
+a.main-block__button:hover {
+  background-color: #008fa4;
+}
+
+.main-img {
+  width: 379px;
+  height: 269px;
+  transform: translate(0%, 4%);
+}
+
+/* ---Join Meetup---------------------------------------------------------------------- */
+.page__joinMeetup-block,
+.page__howWorks-block,
+.page__categories-block,
+.page__friendships-block {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin-bottom: 62px;
+}
+
+.join-meetup__container {
+  position: relative;
+}
+.join-meetup__container .join-meetup__body-img {
+  position: absolute;
+  top: 6%;
+  right: 6%;
+}
+
+.join-meetup__body {
+  display: flex;
+  align-items: end;
+  background: rgba(151, 202, 209, 0.1215686275);
+  border-radius: 8px;
+  padding: 36px 0 48px 56px;
+}
+
+.join-meetup__body-content {
+  width: 665px;
+}
+.join-meetup__body-content .join-meetup__body-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 129%;
+}
+.join-meetup__body-content .join-meetup__body-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 24px 0;
+  margin-top: 22px;
+}
+.join-meetup__body-content .join-meetup__button {
+  background-color: #F65858;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 10px 69px;
+}
+.join-meetup__body-content .join-meetup__button:hover {
+  background-color: #f77070;
+}
+
+/* ---Explore top categories--------------------------------------------------------------- */
+.page__categories-block {
+  margin-bottom: 40px;
+}
+
+.categories-block_title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 129%;
+  margin-bottom: 22px;
+}
+
+.categories-block__all-items {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 16px;
+}
+.categories-block__all-items .categories-block__item {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 150%;
+  height: 112px;
+  background-color: rgba(151, 202, 209, 0.1215686275);
+  text-align: center;
+  font-weight: 500;
+  border-radius: 8px;
+  padding-top: 47px;
+  cursor: pointer;
+}
+.categories-block__all-items .categories-block__item p {
+  width: 100px;
+}
+.categories-block__all-items .categories-block__item:hover {
+  background-color: rgba(80, 166, 178, 0.1215686275);
+}
+.categories-block__all-items .categories-block__item.item-1::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/category-1.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(0%, -25px);
+  z-index: 1;
+}
+.categories-block__all-items .categories-block__item.item-2::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/category-2.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(0%, -25px);
+  z-index: 1;
+}
+.categories-block__all-items .categories-block__item.item-3::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/category-3.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(0%, -25px);
+  z-index: 1;
+}
+.categories-block__all-items .categories-block__item.item-4::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/category-4.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(0%, -25px);
+  z-index: 1;
+}
+.categories-block__all-items .categories-block__item.item-5::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/category-5.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(0%, -25px);
+  z-index: 1;
+}
+.categories-block__all-items .categories-block__item.item-6::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/category-6.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(0%, -25px);
+  z-index: 1;
+}
+.categories-block__all-items .categories-block__item.item-7::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/category-7.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(0%, -25px);
+  z-index: 1;
+}
+.categories-block__all-items .categories-block__item.item-8::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/category-8.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(0%, -25px);
+  z-index: 1;
+}
+
+/* ---Popular cities on Meetup--------------------------------------------------------------- */
+.page__cities-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cities-block_title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 129%;
+  margin-top: 24px;
+}
+
+.cities-block_text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 24px 0;
+  color: #707070;
+  margin: 16px 0 28px 0;
+}
+
+.cities-block__all-cities {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 40px;
+  margin-bottom: 40px;
+}
+.cities-block__all-cities .cities-block__city {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cities-block__all-cities .cities-block__city:hover .cities-block__city-title {
+  text-decoration: underline;
+}
+.cities-block__all-cities .cities-block__city:hover .cities-block__city-image {
+  opacity: 0.7;
+}
+.cities-block__all-cities .cities-block__city .cities-block__city-title {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 10px;
+}
+.cities-block__all-cities .cities-block__city .cities-block__city-image {
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 28px;
+}
+.cities-block__all-cities .cities-block__city .cities-block__city-image.city-1 {
+  background-image: url("../img/city-1.png");
+}
+.cities-block__all-cities .cities-block__city .cities-block__city-image.city-2 {
+  background-image: url("../img/city-2.png");
+}
+.cities-block__all-cities .cities-block__city .cities-block__city-image.city-3 {
+  background-image: url("../img/city-3.png");
+}
+.cities-block__all-cities .cities-block__city .cities-block__city-image.city-4 {
+  background-image: url("../img/city-4.png");
+}
+.cities-block__all-cities .cities-block__city .cities-block__city-image.city-5 {
+  background-image: url("../img/city-5.png");
+}
+
+/* ---How Meetup works-------------------------------------------------------------------- */
+.page__howWorks-block {
+  display: flex;
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.howWorks-block_title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 129%;
+  margin-bottom: 24px;
+}
+
+.howWorks-block__all-howWorks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.howWorks-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.howWorks-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 24px 0;
+  margin: 14px 0;
+}
+
+.howWorks-block {
+  background-color: rgba(151, 202, 209, 0.1215686275);
+  border-radius: 8px;
+  padding: 32px 112px 24px 89px;
+}
+.howWorks-block span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 24px 0;
+  color: #00798a;
+}
+.howWorks-block:hover {
+  background-color: rgba(80, 166, 178, 0.1215686275);
+}
+.howWorks-block.howWorks-1::before {
+  content: "";
+  width: 41px;
+  height: 41px;
+  background-image: url("../img/search-green.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(-160%, 0%);
+  z-index: 1;
+}
+.howWorks-block.howWorks-2::before {
+  content: "";
+  width: 41px;
+  height: 41px;
+  background-image: url("../img/plus.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(-160%, 0%);
+  z-index: 1;
+}
+
+/* ---Friendships are made on Meetup-------------------------------------------------------------------- */
+.page__friendships-block {
+  margin-bottom: 54px;
+}
+
+.friendships-block__friendships-block-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 129%;
+}
+
+.friendships-block__friendships-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 24px 0;
+  color: #707070;
+  margin: 16px 0 28px 0;
+}
+
+.friendships-block__all-friendships {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.friendships-block {
+  display: flex;
+  flex-direction: column;
+}
+.friendships-block .friendship-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.friendships-block .friendship-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 24px 0;
+  color: #707070;
+  margin: 10px 0 16px 0;
+}
+.friendships-block span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 24px 0;
+  color: #00798a;
+  margin: 0;
+}
+.friendships-block .friendships-block__image {
+  height: 192px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+.friendships-block .friendships-block__image.friendship-1 {
+  background-image: url("../img/friendship-1.png");
+}
+.friendships-block .friendships-block__image.friendship-2 {
+  background-image: url("../img/friendship-2.png");
+}
+.friendships-block .friendships-block__image.friendship-3 {
+  background-image: url("../img/friendship-3.png");
+}
+.friendships-block:hover .friendships-block__image {
+  opacity: 0.7;
+}
+.friendships-block:hover span {
+  text-decoration: underline;
+}
+
+/* ---Events-near----Upcoming online events--------------------------------------------- */
+.page__events-block,
+.page__categories-block {
+  display: flex;
+  justify-content: center;
+}
+
+.page__events-block-title,
+.page__onlineEvents-block-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.page__events-title,
+.page__onlineEvents-title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 129%;
+}
+
+.page__events-location {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  border-radius: 8px;
+  margin-left: 20px;
+  color: #00798a;
+  padding: 10px 60px 10px 12px;
+  background: rgba(151, 202, 209, 0.1215686275);
+}
+.page__events-location:after {
+  content: " ";
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/pen-icon.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(160%, 25%);
+  z-index: 1;
+}
+.page__events-location:hover {
+  background-color: rgba(80, 166, 178, 0.1215686275);
+  text-decoration: underline;
+}
+
+.page__events-all,
+.page__onlineEvents-all {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #00798a;
+  margin-left: auto;
+}
+.page__events-all:hover,
+.page__onlineEvents-all:hover {
+  color: #008fa4;
+  text-decoration: underline;
+}
+
+.event-block__all-cards,
+.onlineEvent-block__all-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 36px;
+  margin-bottom: 40px;
+}
+
+.event-block__card,
+.onlineEvent-block__card {
+  border-radius: 4px;
+  width: 100%;
+  height: 399px;
+  position: relative;
+}
+.event-block__card .onlineEvent-label,
+.onlineEvent-block__card .onlineEvent-label {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  border-radius: 4px;
+  color: #707070;
+  background-color: #FFFFFF;
+  padding: 3px 8px 3px 25px;
+  transform: translate(10px, 10px);
+  z-index: 1;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.event-block__card .onlineEvent-label::before,
+.onlineEvent-block__card .onlineEvent-label::before {
+  content: " ";
+  width: 14px;
+  height: 11px;
+  background-image: url("../img/online.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(-132%, 18%);
+  z-index: 1;
+}
+.event-block__card .event-block__card-info,
+.event-block__card .onlineEvent-block__card-info,
+.onlineEvent-block__card .event-block__card-info,
+.onlineEvent-block__card .onlineEvent-block__card-info {
+  position: relative;
+}
+.event-block__card:hover .event-block__card-title,
+.event-block__card:hover .onlineEvent-block__card-title,
+.onlineEvent-block__card:hover .event-block__card-title,
+.onlineEvent-block__card:hover .onlineEvent-block__card-title {
+  text-decoration: underline;
+}
+.event-block__card:hover .event-block__card-image,
+.event-block__card:hover .onlineEvent-block__card-image,
+.onlineEvent-block__card:hover .event-block__card-image,
+.onlineEvent-block__card:hover .onlineEvent-block__card-image {
+  opacity: 0.7;
+}
+.event-block__card .event-block__card-image,
+.event-block__card .onlineEvent-block__card-image,
+.onlineEvent-block__card .event-block__card-image,
+.onlineEvent-block__card .onlineEvent-block__card-image {
+  width: 100%;
+  height: 153px;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  flex-shrink: 0;
+}
+.event-block__card .event-block__card-title,
+.event-block__card .onlineEvent-block__card-title,
+.onlineEvent-block__card .event-block__card-title,
+.onlineEvent-block__card .onlineEvent-block__card-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  margin: 14px 0 18px 0;
+}
+.event-block__card .event-block__card-location,
+.event-block__card .onlineEvent-block__card-location,
+.onlineEvent-block__card .event-block__card-location,
+.onlineEvent-block__card .onlineEvent-block__card-location {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #707070;
+}
+.event-block__card .event-block__card-date,
+.event-block__card .onlineEvent-block__card-date,
+.onlineEvent-block__card .event-block__card-date,
+.onlineEvent-block__card .onlineEvent-block__card-date {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 16px 0 11px 0;
+  margin-left: 25px;
+}
+.event-block__card .online-block__date-img,
+.event-block__card .onlineEvent-block__date-img,
+.onlineEvent-block__card .online-block__date-img,
+.onlineEvent-block__card .onlineEvent-block__date-img {
+  width: 20px;
+  height: 20px;
+  transform: translate(0%, 175%);
+}
+.event-block__card .event-block__card-attendees,
+.event-block__card .onlineEvent-block__card-attendees,
+.onlineEvent-block__card .event-block__card-attendees,
+.onlineEvent-block__card .onlineEvent-block__card-attendees {
+  display: flex;
+}
+.event-block__card .event-block__card-going,
+.event-block__card .onlineEvent-block__card-going,
+.onlineEvent-block__card .event-block__card-going,
+.onlineEvent-block__card .onlineEvent-block__card-going {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+.event-block__card .event-block__card-going,
+.event-block__card .onlineEvent-block__card-going,
+.onlineEvent-block__card .event-block__card-going,
+.onlineEvent-block__card .onlineEvent-block__card-going {
+  margin-left: 25px;
+}
+.event-block__card .event-block__card-free,
+.event-block__card .onlineEvent-block__card-free,
+.onlineEvent-block__card .event-block__card-free,
+.onlineEvent-block__card .onlineEvent-block__card-free {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+.event-block__card .event-block__card-free,
+.event-block__card .onlineEvent-block__card-free,
+.onlineEvent-block__card .event-block__card-free,
+.onlineEvent-block__card .onlineEvent-block__card-free {
+  margin-left: 45px;
+}
+.event-block__card .event-block__card-going::before,
+.onlineEvent-block__card .event-block__card-going::before {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/check.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(-125%, 10%);
+  z-index: 1;
+}
+.event-block__card .onlineEvent-block__card-going::before,
+.onlineEvent-block__card .onlineEvent-block__card-going::before {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/check.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(-125%, 10%);
+  z-index: 1;
+}
+.event-block__card .event-block__card-free::before,
+.onlineEvent-block__card .event-block__card-free::before {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/ticket.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(-125%, 10%);
+  z-index: 1;
+}
+.event-block__card .onlineEvent-block__card-free::before,
+.onlineEvent-block__card .onlineEvent-block__card-free::before {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/ticket.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(-125%, 10%);
+  z-index: 1;
+}
+
+.event-block__card-image.event-1 {
+  background-image: url("../img/event-1.png");
+}
+
+.event-block__card-image.event-2 {
+  background-image: url("../img/event-2.png");
+}
+
+.event-block__card-image.event-3 {
+  background-image: url("../img/event-3.png");
+}
+
+.event-block__card-image.event-4 {
+  background-image: url("../img/event-4.png");
+}
+
+.event-block__card-image.event-5 {
+  background-image: url("../img/event-5.png");
+}
+
+.event-block__card-image.event-6 {
+  background-image: url("../img/event-6.png");
+}
+
+.event-block__card-image.event-7 {
+  background-image: url("../img/event-7.png");
+}
+
+.event-block__card-image.event-8 {
+  background-image: url("../img/event-8.png");
+}
+
+.onlineEvent-block__card-image.onlineEvent-1 {
+  background-image: url("../img/onlineEvent-1.png");
+}
+
+.onlineEvent-block__card-image.onlineEvent-2 {
+  background-image: url("../img/onlineEvent-2.png");
+}
+
+.onlineEvent-block__card-image.onlineEvent-3 {
+  background-image: url("../img/onlineEvent-3.png");
+}
+
+.onlineEvent-block__card-image.onlineEvent-4 {
+  background-image: url("../img/onlineEvent-4.png");
+}
+
+.footer {
+  background-color: #212121;
+  color: #fff;
+}
+
+footer li a {
+  color: #c5c4c4;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+footer .footer-container {
+  width: 1066px;
+  padding-bottom: 40px;
+}
+
+.footer__create-group {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #707070;
+  height: 95px;
+}
+.footer__create-group p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #fff;
+}
+.footer__create-group .footer-button__get-started {
+  color: #fff;
+  border: 2px solid #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  white-space: nowrap;
+  margin-left: 38px;
+  cursor: pointer;
+}
+.footer__create-group .footer-button__get-started:hover {
+  background-color: #fff;
+  color: #212121;
+}
+
+.footer__columns {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  margin: 24px 0 30px 0;
+}
+.footer__columns .footer__column .footer__column-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.footer__columns .footer__column .footer__column-links li {
+  margin-bottom: 14px;
+}
+.footer__columns .footer__column .footer__column-links a:hover {
+  color: #fff;
+}
+
+.footer__social-block .footer__column-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.footer__social-block .footer__socialBlock-items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.footer__social-block .footer__socialBlock-items .footer__social-icons {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.footer__social-block .footer__socialBlock-items .footer__social-icons a:hover svg path {
+  fill: #fff;
+}
+.footer__social-block .footer__socialBlock-items .footer__stores-icons a img {
+  display: inline-block;
+  border: 1px solid #c5c4c4;
+  border-radius: 6px;
+  height: 40px;
+}
+.footer__social-block .footer__socialBlock-items .footer__stores-icons a img:hover {
+  border: 1px solid #fff;
+}
+.footer__social-block .footer__socialBlock-items .footer__stores-icons a:last-child {
+  margin-left: 20px;
+}
+
+.footer__legal {
+  display: flex;
+  justify-content: start;
+}
+.footer__legal .footer__legal-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.footer__legal .footer__legal-links li {
+  margin-left: 30px;
+}
+.footer__legal .footer__legal-links a:hover {
+  color: #fff;
+}
+
+.joinEvents-block {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  margin-top: 82px;
+  margin-bottom: 100px;
+}
+
+.joinEvents__search-block h2 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 129%;
+}
+
+.joinEvents__events-btn {
+  color: #00798a;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 5px;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+.joinEvents__select-container {
+  display: flex;
+  margin: 18px 0 54px 0;
+  gap: 18px;
+}
+
+.joinEvents__select {
+  position: relative;
+}
+.joinEvents__select select {
+  appearance: none;
+  width: fit-content;
+  font-size: 14px;
+  padding: 16px 46px 16px 16px;
+  background-color: #F6F7F8;
+  color: #212121;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  outline: none;
+}
+.joinEvents__select select:focus {
+  outline: 1px solid #00798a;
+}
+.joinEvents__select .select-arrow {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  pointer-events: none;
+}
+
+.joinEvents__events-block {
+  max-width: 100%;
+  margin-top: 56px;
+}
+
+.joinEvents__events-card {
+  display: flex;
+  border-top: 1px solid #d9d9d9;
+  padding: 16px 0 16px 0;
+  gap: 12px;
+}
+.joinEvents__events-card:hover .joinEvents__title {
+  text-decoration: underline;
+}
+.joinEvents__events-card:hover .joinEvents__image {
+  opacity: 0.7;
+}
+
+.joinEvents__image-container {
+  width: 160px;
+  height: 90px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.onlineEvent-label {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  border-radius: 4px;
+  color: #707070;
+  background-color: #FFFFFF;
+  padding: 3px 8px 3px 25px;
+  transform: translate(10px, 10px);
+  z-index: 1;
+  position: absolute;
+}
+.onlineEvent-label::before {
+  content: " ";
+  width: 14px;
+  height: 11px;
+  background-image: url("../img/online.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(-132%, 18%);
+  z-index: 1;
+}
+
+.joinEvents__image {
+  border-radius: 8px;
+  width: 160px;
+}
+
+.joinEvents__card-info {
+  position: relative;
+  margin: 7px 5px 5px 0px;
+}
+.joinEvents__card-info .joinEvents__date {
+  font-weight: 500;
+  color: #7c6f50;
+  text-transform: uppercase;
+}
+.joinEvents__card-info .joinEvents__title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 10px 0 12px 0;
+}
+.joinEvents__card-info .joinEvents__category {
+  font-weight: 500;
+  color: #707070;
+}
+.joinEvents__card-info .joinEvents__atendees {
+  font-weight: 400;
+  color: #707070;
+  margin-top: 30px;
+}
+
+.joinEvents__map-block {
+  max-width: 350px;
+  position: relative;
+}
+.joinEvents__map-block p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.joinEvents__map-block h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 2px 0 14px 0;
+}
+
+.events-page__map-block {
+  max-width: 30%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.map-block__content .map-block__content-txt {
+  font-size: 12px;
+}
+.map-block__content .map-block__content-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 2px 0 14px 0;
+}
+
+.map-block__map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map-block__map img {
+  width: 100%;
+  height: 200px;
+}
+.map-block__map .map-block__map-button {
+  position: absolute;
+  color: #00798a;
+  background-color: #fff;
+  border: 2px solid #00798a;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 10px 50px 10px 24px;
+}
+.map-block__map .map-block__map-button::after {
+  content: " ";
+  width: 18px;
+  height: 18px;
+  background-image: url("../img/arrows.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(75%, -8%);
+  z-index: 1;
+}
+.map-block__map .map-block__map-button:hover {
+  background-color: #eafdff;
+}
+.map-block__map .map-block__map-button:active {
+  color: #fff;
+  background-color: #00798a;
+  background-color: #006371;
+  border: 2px solid #006371;
+}
+.map-block__map .map-block__close-button {
+  position: absolute;
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  top: 70px;
+  right: 15px;
+}
+.map-block__map .map-block__close-button::after {
+  content: " ";
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/close.svg");
+  background-size: cover;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+@media (max-width: 920px) {
+  .joinEvents__events-block {
+    width: 100%;
+  }
+  .events-page__map-block {
+    display: none;
+  }
+}
+@media (max-width: 540px) {
+  .joinEvents__events-block {
+    max-width: calc(100% - 40px);
+  }
+  .joinEvents__select-container {
+    max-width: 100vw;
+    overflow-x: scroll;
+  }
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container,
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.button {
+  font-weight: 500;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+    max-width: 890px;
+    margin: 0 auto;
+  }
+  .header__search-events input {
+    width: 230px;
+  }
+  .header__search-location input {
+    width: 230px;
+  }
+  .main-block__body {
+    margin-right: 20px;
+    width: 100%;
+  }
+  .main-block__title {
+    width: 100%;
+    font-size: 38px;
+  }
+  .main-block__text {
+    width: 100%;
+  }
+  .main-img {
+    margin: 0;
+  }
+  .event-block__all-cards,
+  .onlineEvent-block__all-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .join-meetup__container .join-meetup__body-text {
+    width: 60%;
+  }
+  .join-meetup__container .join-meetup__body-img {
+    top: 10%;
+  }
+  .categories-block__all-items {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
+  }
+  .cities-block__all-cities {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 40px;
+  }
+  .cities-block__all-cities .cities-block__city .cities-block__city-image {
+    width: 145px;
+    height: 145px;
+  }
+  .howWorks-block {
+    padding: 32px 30px 24px 89px;
+  }
+  .friendships-block .friendships-block__image {
+    height: 142px;
+  }
+  .footer {
+    width: 100%;
+  }
+  .footer .footer-container {
+    width: 100%;
+    padding: 0px 37px 40px 37px;
+    margin: 0;
+  }
+}
+@media (max-width: 970px) {
+  .header__search-events input {
+    width: 200px;
+  }
+  .header__search-location input {
+    width: 200px;
+  }
+}
+@media (max-width: 920px) {
+  .container {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .page__main-block {
+    margin-bottom: 100px;
+  }
+  .page__main-block .main-block__title {
+    width: 100%;
+    font-size: 30px;
+  }
+  .page__main-block .main-img {
+    width: 350px;
+  }
+  .join-meetup__container .join-meetup__body {
+    padding: 36px 48px 48px 56px;
+  }
+  .join-meetup__container .join-meetup__body-content .join-meetup__body-title {
+    font-size: 24px;
+    margin-bottom: 220px;
+  }
+  .join-meetup__container .join-meetup__body-content .join-meetup__body-text {
+    width: 100%;
+  }
+  .join-meetup__container .join-meetup__body-img {
+    top: 12%;
+    right: 28%;
+  }
+  .cities-block__all-cities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 45px;
+  }
+}
+@media (max-width: 920px) {
+  .header__search-events input {
+    width: 170px;
+  }
+  .header__search-location input {
+    width: 170px;
+  }
+}
+@media (max-width: 840px) {
+  .header__search-block {
+    display: none;
+  }
+  .header__search-block.hidden {
+    display: block;
+  }
+}
+@media (max-width: 810px) {
+  .container {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  .main-block__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .event-block__all-cards,
+  .onlineEvent-block__all-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .join-meetup__container .join-meetup__body-img {
+    right: 20%;
+  }
+  .cities-block__all-cities {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 45px;
+  }
+  .friendships-block .friendships-block__image {
+    height: 92px;
+  }
+}
+@media (max-width: 880px) {
+  footer .footer__legal-links a {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .footer .footer-container {
+    width: 100%;
+    padding: 0 15px;
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 630px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .header__logo {
+    margin-left: 15px;
+  }
+  .main-block__body {
+    width: calc(100% - 20px);
+  }
+  .header__client-button {
+    margin-right: 15px;
+  }
+  .header__search-block.hidden {
+    margin: 0 15px;
+  }
+  .header__search-block.hidden .header__search-location {
+    width: calc(100% - 70px);
+    margin-right: -4px;
+  }
+  .page__events-all,
+  .page__onlineEvents-all {
+    display: none;
+  }
+  .event-block__all-cards,
+  .onlineEvent-block__all-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 28px;
+  }
+  .event-block__all-cards .event-block__card,
+  .event-block__all-cards .onlineEvent-block__card,
+  .onlineEvent-block__all-cards .event-block__card,
+  .onlineEvent-block__all-cards .onlineEvent-block__card {
+    display: flex;
+    border-radius: none;
+    height: auto;
+    border-top: 1px solid #d9d9d9;
+    border-radius: 0;
+    padding: 16px 0 0 0;
+    gap: 12px;
+  }
+  .event-block__all-cards .event-block__card .event-block__card-image,
+  .event-block__all-cards .event-block__card .onlineEvent-block__card-image,
+  .event-block__all-cards .onlineEvent-block__card .event-block__card-image,
+  .event-block__all-cards .onlineEvent-block__card .onlineEvent-block__card-image,
+  .onlineEvent-block__all-cards .event-block__card .event-block__card-image,
+  .onlineEvent-block__all-cards .event-block__card .onlineEvent-block__card-image,
+  .onlineEvent-block__all-cards .onlineEvent-block__card .event-block__card-image,
+  .onlineEvent-block__all-cards .onlineEvent-block__card .onlineEvent-block__card-image {
+    position: relative;
+    width: 160px;
+    height: 90px;
+  }
+  .event-block__all-cards .event-block__card .onlineEvent-label,
+  .event-block__all-cards .onlineEvent-block__card .onlineEvent-label,
+  .onlineEvent-block__all-cards .event-block__card .onlineEvent-label,
+  .onlineEvent-block__all-cards .onlineEvent-block__card .onlineEvent-label {
+    position: absolute;
+    top: 14px;
+    left: 0px;
+    z-index: 1;
+  }
+  .event-block__all-cards {
+    gap: 15px;
+  }
+  .event-block__card-info,
+  .onlineEvent-block__card-info {
+    display: flex;
+    flex-direction: column;
+    margin: 7px 5px 5px 0px;
+  }
+  .event-block__card-info .event-block__card-date,
+  .event-block__card-info .onlineEvent-block__card-date,
+  .onlineEvent-block__card-info .event-block__card-date,
+  .onlineEvent-block__card-info .onlineEvent-block__card-date {
+    font-weight: 500;
+    color: #7C6F50;
+    margin: 0 0 0 25px;
+    order: 1;
+    transform: translateX(-24px);
+  }
+  .event-block__card-info .event-block__card-title,
+  .event-block__card-info .onlineEvent-block__card-title,
+  .onlineEvent-block__card-info .event-block__card-title,
+  .onlineEvent-block__card-info .onlineEvent-block__card-title {
+    font-size: 16px;
+    margin: 10px 0 20px 0;
+    order: 2;
+  }
+  .event-block__card-info .online-block__date-img,
+  .event-block__card-info .onlineEvent-block__date-img,
+  .onlineEvent-block__card-info .online-block__date-img,
+  .onlineEvent-block__card-info .onlineEvent-block__date-img {
+    display: none;
+  }
+  .event-block__card-info .event-block__card-location,
+  .event-block__card-info .onlineEvent-block__card-location,
+  .onlineEvent-block__card-info .event-block__card-location,
+  .onlineEvent-block__card-info .onlineEvent-block__card-location {
+    order: 3;
+  }
+  .event-block__card-info .event-block__card-attendees,
+  .event-block__card-info .onlineEvent-block__card-attendees,
+  .onlineEvent-block__card-info .event-block__card-attendees,
+  .onlineEvent-block__card-info .onlineEvent-block__card-attendees {
+    display: none;
+  }
+  .friendships-block__all-friendships {
+    display: block;
+  }
+  .friendships-block {
+    margin-bottom: 40px;
+  }
+  .friendships-block:last-child {
+    margin-bottom: 0px;
+  }
+  .friendships-block .friendships-block__image {
+    height: 300px;
+  }
+  .join-meetup__container .join-meetup__body-img {
+    top: 13%;
+    right: 18%;
+  }
+  .categories-block__all-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cities-block__all-cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cities-block__all-cities .cities-block__city .cities-block__city-image {
+    width: 190px;
+    height: 190px;
+  }
+  .howWorks-block__all-howWorks {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+  }
+  .footer__stores-icons {
+    display: none;
+  }
+}
+@media (max-width: 590px) {
+  .join-meetup__container .join-meetup__body {
+    padding: 36px 48px 48px 48px;
+  }
+  .join-meetup__container .join-meetup__body-content .join-meetup__body-title {
+    font-size: 24px;
+    margin-bottom: 220px;
+  }
+  .join-meetup__container .join-meetup__body-content .join-meetup__body-text {
+    width: 100%;
+  }
+  .join-meetup__container .join-meetup__body-img {
+    top: 12%;
+    right: 20%;
+  }
+}
+@media (max-width: 500px) {
+  .join-meetup__container .join-meetup__body-img {
+    top: 12%;
+    right: 14%;
+  }
+  .friendships-block .friendships-block__image {
+    height: 230px;
+  }
+}
+@media (max-width: 470px) {
+  .join-meetup__container .join-meetup__body-img {
+    height: 180px;
+    top: 14%;
+    right: 14%;
+  }
+  .cities-block__all-cities .cities-block__city .cities-block__city-image {
+    width: 160px;
+    height: 160px;
+  }
+  .page__events-title,
+  .page__onlineEvents-title,
+  .categories-block_title,
+  .cities-block_title,
+  .friendships-block__friendships-block-title {
+    font-size: 23px;
+  }
+  .page__events-location {
+    font-size: 14px;
+    padding: 10px 40px 10px 12px;
+    margin-left: auto;
+  }
+  .page__events-location:after {
+    width: 13px;
+    height: 13px;
+    transform: translate(100%, 25%);
+  }
+}
+@media (max-width: 420px) {
+  .header__client-lang {
+    display: none;
+  }
+  .event-block__date-img,
+  .onlineEvent-block__date-img {
+    display: none;
+    padding-left: 0;
+  }
+  .join-meetup__container .join-meetup__body-img {
+    height: 160px;
+    top: 14%;
+    right: 12%;
+  }
+  .cities-block__all-cities .cities-block__city .cities-block__city-image {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    width: 100%;
+  }
+  .main-block__container .main-block__body {
+    margin-top: 50px;
+  }
+  .main-block__container .main-img {
+    width: 100%;
+  }
+  .page .page__main-block {
+    margin-bottom: 50px;
+  }
+  .join-meetup__container {
+    position: relative;
+  }
+  .join-meetup__container::after {
+    margin: 0 auto;
+    width: 341px;
+    height: 100%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  .join-meetup__container .join-meetup__body {
+    padding: 20px 20px 40px 20px;
+  }
+  .join-meetup__container .join-meetup__body-img {
+    top: 15%;
+    right: 10%;
+  }
+  .cities-block__all-cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cities-block__all-cities .cities-block__city .cities-block__city-image {
+    width: 130px;
+    height: 130px;
+  }
+  .friendships-block .friendships-block__image {
+    height: 200px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

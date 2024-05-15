@@ -1,0 +1,323 @@
+/* ---Join Meetup---------------------------------------------------------------------- */
+
+.page__joinMeetup-block,
+.page__howWorks-block,
+.page__categories-block,
+.page__friendships-block {
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin-bottom: 62px;
+}
+
+.join-meetup__container {
+    position: relative;
+
+    .join-meetup__body-img {
+        position: absolute;
+        top: 6%;
+        right: 6%;
+    }
+}
+
+.join-meetup__body {
+    display: flex;
+    align-items: end;
+    background: $light-green;
+    border-radius: 8px;
+    padding: 36px 0 48px 56px;
+}
+
+.join-meetup__body-content {
+    width: 665px;
+
+    .join-meetup__body-title {
+        @include page-subtitle;
+    }
+
+    .join-meetup__body-text {
+        @include page-text;
+        margin-top: 22px;
+    }
+
+    .join-meetup__button {
+        @include red-button($firm-red, $white);
+        padding: 10px 69px;
+    }
+}
+
+/* ---Explore top categories--------------------------------------------------------------- */
+
+.page__categories-block {
+    margin-bottom: 40px;
+}
+
+
+.categories-block_title {
+    @include page-subtitle();
+    margin-bottom: 22px;
+}
+
+.categories-block__all-items {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 16px;
+
+    .categories-block__item {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 150%;
+        height: 112px;
+        background-color: $light-green;
+        text-align: center;
+        font-weight: 500;
+        border-radius: 8px;
+        padding-top: 47px;
+        cursor: pointer;
+
+        p {
+            width: 100px;
+        }
+
+        &:hover {
+            background-color: darken($light-green, 20%);
+        }
+
+        @for $i from 1 through 8 {
+            &.item-#{$i}::before {
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-image: url('../img/category-#{$i}.svg');
+                background-size: cover;
+                position: absolute;
+                transform: translate(0%, -25px);
+                z-index: 1;
+            }
+        }
+    }
+}
+
+/* ---Popular cities on Meetup--------------------------------------------------------------- */
+
+.page__cities-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.cities-block_title {
+    @include page-subtitle();
+    margin-top: 24px;
+}
+
+.cities-block_text {
+    @include page-text();
+    color: $text-gray;
+    margin: 16px 0 28px 0;
+}
+
+.cities-block__all-cities {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 40px;
+    margin-bottom: 40px;
+
+    .cities-block__city {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:hover {
+            .cities-block__city-title {
+                text-decoration: underline;
+            }
+
+            .cities-block__city-image {
+                opacity: .7;
+            }
+        }
+
+        .cities-block__city-title {
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .cities-block__city-image {
+            border-radius: 50%;
+            width: 190px;
+            height: 190px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 28px;
+
+            &.city-1 {
+                background-image: url('../img/city-1.png');
+            }
+
+            &.city-2 {
+                background-image: url('../img/city-2.png');
+            }
+
+            &.city-3 {
+                background-image: url('../img/city-3.png');
+            }
+
+            &.city-4 {
+                background-image: url('../img/city-4.png');
+            }
+
+            &.city-5 {
+                background-image: url('../img/city-5.png');
+            }
+        }
+    }
+}
+
+/* ---How Meetup works-------------------------------------------------------------------- */
+
+.page__howWorks-block {
+    display: flex;
+    width: 100%;
+    margin-bottom: 64px;
+}
+
+.howWorks-block_title {
+    @include page-subtitle();
+    margin-bottom: 24px;
+}
+
+.howWorks-block__all-howWorks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.howWorks-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.howWorks-text {
+    @include page-text();
+    margin: 14px 0;
+}
+
+.howWorks-block {
+    background-color: $light-green;
+    border-radius: 8px;
+    padding: 32px 112px 24px 89px;
+
+    & span {
+        @include page-text();
+        // font-weight: 500;
+        color: $firm-green;
+    }
+
+    &:hover {
+        background-color: darken($light-green, 20%);
+    }
+
+    &.howWorks-1::before {
+        content: '';
+        width: 41px;
+        height: 41px;
+        background-image: url('../img/search-green.svg');
+        background-size: cover;
+        position: absolute;
+        transform: translate(-160%, 0%);
+        z-index: 1;
+    }
+
+    &.howWorks-2::before {
+        content: '';
+        width: 41px;
+        height: 41px;
+        background-image: url('../img/plus.svg');
+        background-size: cover;
+        position: absolute;
+        transform: translate(-160%, -0%);
+        z-index: 1;
+    }
+}
+
+/* ---Friendships are made on Meetup-------------------------------------------------------------------- */
+
+.page__friendships-block {
+    margin-bottom: 54px;
+}
+
+.friendships-block__friendships-block-title {
+    @include page-subtitle();
+}
+
+.friendships-block__friendships-text {
+    @include page-text();
+    color: $text-gray;
+    margin: 16px 0 28px 0;
+}
+
+.friendships-block__all-friendships {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+}
+
+.friendships-block {
+    display: flex;
+    flex-direction: column;
+
+    .friendship-title {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+    }
+
+    .friendship-text {
+        @include page-text();
+        color: $text-gray;
+        margin: 10px 0 16px 0;
+    }
+
+    span {
+        @include page-text();
+        // font-weight: 500;
+        color: $firm-green;
+        margin: 0;
+    }
+
+    .friendships-block__image {
+        height: 192px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        margin-bottom: 24px;
+
+        &.friendship-1 {
+            background-image: url('../img/friendship-1.png');
+        }
+
+        &.friendship-2 {
+            background-image: url('../img/friendship-2.png');
+        }
+
+        &.friendship-3 {
+            background-image: url('../img/friendship-3.png');
+        }
+    }
+
+    &:hover {
+        .friendships-block__image {
+            opacity: .7;
+        }
+
+        span {
+            text-decoration: underline;
+        }
+    }
+}

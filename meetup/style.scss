@@ -1,0 +1,553 @@
+@import 'styles/vars';
+@import 'styles/reset';
+@import 'styles/header';
+@import 'styles/main';
+@import 'styles/meetup';
+@import 'styles/events';
+@import 'styles/footer';
+@import 'styles/events-page';
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container,
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.button {
+    font-weight: 500;
+    color: #fff;
+}
+
+
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+        max-width: 890px;
+        margin: 0 auto;
+    }
+
+    .header__search-events input {
+        width: 230px;
+    }
+
+    .header__search-location input {
+        width: 230px;
+    }
+
+    .main-block__body {
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .main-block__title {
+        width: 100%;
+        font-size: 38px;
+    }
+
+    .main-block__text {
+        width: 100%;
+    }
+
+    .main-img {
+        margin: 0;
+    }
+
+    .event-block__all-cards,
+    .onlineEvent-block__all-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .join-meetup__container {
+        .join-meetup__body-text {
+            width: 60%;
+        }
+
+        .join-meetup__body-img {
+            top: 10%;
+        }
+    }
+
+    .categories-block__all-items {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 16px;
+
+    }
+
+    .cities-block__all-cities {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 30px;
+        margin-bottom: 40px;
+
+        .cities-block__city {
+            .cities-block__city-image {
+                width: 145px;
+                height: 145px;
+            }
+        }
+    }
+
+    .howWorks-block {
+        padding: 32px 30px 24px 89px;
+    }
+
+    .friendships-block {
+        .friendships-block__image {
+            height: 142px;
+        }
+    }
+
+    .footer {
+        width: 100%;
+
+        .footer-container {
+            width: 100%;
+            padding: 0px 37px 40px 37px;
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 970px) {
+    .header__search-events input {
+        width: 200px;
+    }
+
+    .header__search-location input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 920px) {
+    .container {
+        width: 100%;
+        max-width: 780px;
+        margin: 0 auto;
+    }
+
+    .page__main-block {
+        margin-bottom: 100px;
+
+        .main-block__title {
+            width: 100%;
+            font-size: 30px;
+        }
+
+        .main-img {
+            width: 350px;
+        }
+    }
+
+    .join-meetup__container {
+        .join-meetup__body {
+            padding: 36px 48px 48px 56px;
+        }
+
+        .join-meetup__body-content {
+
+            .join-meetup__body-title {
+                font-size: 24px;
+                margin-bottom: 220px;
+            }
+
+            .join-meetup__body-text {
+                width: 100%;
+            }
+        }
+
+        .join-meetup__body-img {
+            top: 12%;
+            right: 28%;
+        }
+    }
+
+    .cities-block__all-cities {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 45px;
+    }
+}
+
+@media (max-width: 920px) {
+    .header__search-events input {
+        width: 170px;
+    }
+
+    .header__search-location input {
+        width: 170px;
+    }
+}
+
+@media (max-width: 840px) {
+    .header__search-block {
+        display: none;
+    }
+
+    .header__search-block.hidden {
+        display: block;
+    }
+}
+
+@media (max-width: 810px) {
+    .container {
+        width: 100%;
+        max-width: 580px;
+        margin: 0 auto;
+    }
+
+    .main-block__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-block__all-cards,
+    .onlineEvent-block__all-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .join-meetup__container .join-meetup__body-img {
+        right: 20%;
+    }
+
+    .cities-block__all-cities {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 45px;
+    }
+
+    .friendships-block {
+        .friendships-block__image {
+            height: 92px;
+        }
+    }
+}
+
+@media (max-width: 880px) {
+    footer .footer__legal-links a {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer .footer-container {
+        width: 100%;
+        padding: 0 15px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 630px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .header__logo {
+        margin-left: 15px;
+    }
+
+    .main-block__body {
+        width: calc(100% - 20px);
+    }
+
+    .header__client-button {
+        margin-right: 15px;
+    }
+
+    .header__search-block.hidden {
+        margin: 0 15px;
+
+        .header__search-location {
+            width: calc(100% - 70px);
+            margin-right: -4px;
+        }
+    }
+
+    .page__events-all,
+    .page__onlineEvents-all {
+        display: none;
+    }
+
+    .event-block__all-cards,
+    .onlineEvent-block__all-cards {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 28px;
+
+        .event-block__card,
+        .onlineEvent-block__card {
+            display: flex;
+            border-radius: none;
+            height: auto;
+            border-top: 1px solid $light-gray;
+            border-radius: 0;
+            padding: 16px 0 0 0;
+            gap: 12px;
+
+            .event-block__card-image,
+            .onlineEvent-block__card-image {
+                position: relative;
+                width: 160px;
+                height: 90px;
+            }
+
+            .onlineEvent-label {
+                position: absolute;
+                top: 14px;
+                left: 0px;
+                z-index: 1;
+            }
+
+        }
+    }
+
+    .event-block__all-cards {
+        gap: 15px;
+    }
+
+    .event-block__card-info,
+    .onlineEvent-block__card-info {
+        display: flex;
+        flex-direction: column;
+        margin: 7px 5px 5px 0px;
+
+        .event-block__card-date,
+        .onlineEvent-block__card-date {
+            font-weight: 500;
+            color: #7C6F50;
+            margin: 0 0 0 25px;
+            order: 1;
+            transform: translateX(-24px)
+        }
+
+
+        .event-block__card-title,
+        .onlineEvent-block__card-title {
+            font-size: 16px;
+            margin: 10px 0 20px 0;
+            order: 2;
+        }
+
+        .online-block__date-img,
+        .onlineEvent-block__date-img {
+            display: none;
+        }
+
+        .event-block__card-location,
+        .onlineEvent-block__card-location {
+            order: 3;
+        }
+
+        .event-block__card-attendees,
+        .onlineEvent-block__card-attendees {
+            display: none;
+        }
+    }
+
+    .friendships-block__all-friendships {
+        display: block;
+    }
+
+    .friendships-block {
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        .friendships-block__image {
+            height: 300px;
+        }
+    }
+
+    .join-meetup__container .join-meetup__body-img {
+        top: 13%;
+        right: 18%;
+    }
+
+    .categories-block__all-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cities-block__all-cities {
+        grid-template-columns: repeat(2, 1fr);
+
+        .cities-block__city .cities-block__city-image {
+            width: 190px;
+            height: 190px;
+        }
+    }
+
+    .howWorks-block__all-howWorks {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 32px;
+    }
+
+    .footer__stores-icons {
+        display: none;
+    }
+}
+
+
+@media (max-width: 590px) {
+
+    .join-meetup__container {
+        .join-meetup__body {
+            padding: 36px 48px 48px 48px;
+        }
+
+        .join-meetup__body-content {
+
+            .join-meetup__body-title {
+                font-size: 24px;
+                margin-bottom: 220px;
+            }
+
+            .join-meetup__body-text {
+                width: 100%;
+            }
+        }
+
+        .join-meetup__body-img {
+            top: 12%;
+            right: 20%;
+        }
+    }
+
+}
+
+@media (max-width: 500px) {
+    .join-meetup__container .join-meetup__body-img {
+        top: 12%;
+        right: 14%;
+    }
+
+    .friendships-block .friendships-block__image {
+        height: 230px;
+    }
+}
+
+@media (max-width: 470px) {
+    .join-meetup__container .join-meetup__body-img {
+        height: 180px;
+        top: 14%;
+        right: 14%;
+    }
+
+    .cities-block__all-cities .cities-block__city .cities-block__city-image {
+        width: 160px;
+        height: 160px;
+    }
+
+    .page__events-title,
+    .page__onlineEvents-title,
+    .categories-block_title,
+    .cities-block_title,
+    .friendships-block__friendships-block-title {
+        font-size: 23px;
+    }
+
+    .page__events-location {
+        font-size: 14px;
+        padding: 10px 40px 10px 12px;
+        margin-left: auto;
+
+        &:after {
+            width: 13px;
+            height: 13px;
+            transform: translate(100%, 25%);
+        }
+
+    }
+}
+
+@media (max-width: 420px) {
+    .header__client-lang {
+        display: none;
+    }
+
+    .event-block__date-img,
+    .onlineEvent-block__date-img {
+        display: none;
+        padding-left: 0;
+    }
+
+    .join-meetup__container .join-meetup__body-img {
+        height: 160px;
+        top: 14%;
+        right: 12%;
+    }
+
+    .cities-block__all-cities .cities-block__city .cities-block__city-image {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .container {
+        width: 100%;
+    }
+
+    .main-block__container {
+        .main-block__body {
+            margin-top: 50px;
+        }
+
+        .main-img {
+            width: 100%;
+        }
+    }
+
+    .page .page__main-block {
+        margin-bottom: 50px;
+    }
+
+    .join-meetup__container {
+        position: relative;
+
+        &::after {
+            margin: 0 auto;
+            width: 341px;
+            height: 100%;
+            background-size: auto;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        .join-meetup__body {
+            padding: 20px 20px 40px 20px;
+        }
+
+        .join-meetup__body-img {
+            top: 15%;
+            right: 10%;
+        }
+    }
+
+    .cities-block__all-cities {
+        grid-template-columns: repeat(2, 1fr);
+
+        .cities-block__city .cities-block__city-image {
+            width: 130px;
+            height: 130px;
+        }
+    }
+
+    .friendships-block .friendships-block__image {
+        height: 200px;
+    }
+}

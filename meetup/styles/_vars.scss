@@ -1,0 +1,95 @@
+// Переменные цветов:
+$firm-red: #F65858;
+$firm-green: #00798a;
+$light-green: #97CAD11F;
+$text-black: #212121;
+$text-gray: #707070;
+$light-gray: #d9d9d9;
+$white: #fff;
+$footer-white: #c5c4c4;
+
+// Зеленая кнопка:
+@mixin green-button($firm-green, $white) {
+    background-color: $firm-green;
+    color: $white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    // transition: all 0.2s;
+
+    &:hover {
+        background-color: lighten($firm-green, 5%);
+    }
+
+    // &:active {
+    //     transform: translateY(1px);
+    // }
+}
+
+// Красная кнопка:
+@mixin red-button($firm-red, $white) {
+    background-color: $firm-red;
+    color: $white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    white-space: nowrap;
+    cursor: pointer;
+    // transition: all 0.2s;
+
+    &:hover {
+        background-color: lighten($firm-red, 5%);
+    }
+
+    // &:active {
+    //     transform: translateY(1px);
+    // }
+}
+
+// Подзаголовок
+@mixin page-subtitle() {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 129%;
+}
+
+// Основной текст
+@mixin page-text() {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 24px 0;
+}
+
+// onlineEvent шильда
+@mixin onlineEvent-label() {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    border-radius: 4px;
+    color: $text-gray;
+    background-color: #FFFFFF;
+    padding: 3px 8px 3px 25px;
+    transform: translate(10px, 10px);
+    z-index: 1;
+
+    &::before {
+        content: ' ';
+        width: 14px;
+        height: 11px;
+        background-image: url('../img/online.svg');
+        background-size: cover;
+        position: absolute;
+        transform: translate(-132%, 18%);
+        z-index: 1;
+    }
+}
