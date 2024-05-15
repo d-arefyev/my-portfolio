@@ -192,6 +192,12 @@ svg * {
     transition-duration: var(--transition-duration);
 }
 
+button,
+select,
+a {
+    cursor: pointer;
+}
+
 a {
     color: var(--color-light);
 }
@@ -808,7 +814,6 @@ input[type=number] {
 }
 
 select {
-    cursor: pointer;
     appearance: none;
 }
 
